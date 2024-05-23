@@ -12,18 +12,18 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-        ranges_tests
-        ranges_tests.cpp
+        tests
+        tests.cpp
 )
 
 target_link_libraries(
-        ranges_tests
+        tests
         ranges
         GTest::gtest_main
 )
 
-target_include_directories(ranges_tests PUBLIC ${PROJECT_SOURCE_DIR})
+target_include_directories(tests PUBLIC ${PROJECT_SOURCE_DIR})
 
 include(GoogleTest)
 
-gtest_discover_tests(ranges_tests)
+gtest_discover_tests(tests)
